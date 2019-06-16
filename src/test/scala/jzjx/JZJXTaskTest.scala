@@ -14,7 +14,7 @@ class JZJXTaskTest extends FunSuite {
   test("request next") {
     val task = new JZJXTask("e49a9b61cc9d9f6965a2b28d9189b66e")
     val (requester, submitter) = task.cons()
-    val question = requester.send()
+    val (question, summary) = requester.send()
     println(question.json)
   }
 }
