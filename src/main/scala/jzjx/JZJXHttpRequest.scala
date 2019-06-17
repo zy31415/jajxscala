@@ -1,12 +1,13 @@
 package jzjx
 
-import com.softwaremill.sttp.{HttpURLConnectionBackend, SttpBackend}
+import com.softwaremill.sttp.HttpURLConnectionBackend
 
-abstract class JZJXApi {
+abstract class JZJXHttpRequest {
   val URL = "https://www.ccdriving.ca/index.php"
-
   implicit val backend = HttpURLConnectionBackend()
-
   val parameters: Map[String, String]
-
 }
+
+//object JZJXHttpRequest {
+//
+//}

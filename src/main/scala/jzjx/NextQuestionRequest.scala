@@ -6,7 +6,7 @@ import com.softwaremill.sttp.UriContext
 import org.json.JSONObject
 
 
-class NextQuestionRequester (val phpsessid: String) extends JZJXApi {
+class NextQuestionRequest(val phpsessid: String) extends JZJXHttpRequest {
 
   override val parameters = Map("route" -> "test/mock/next", "test_type" -> "view")
 
